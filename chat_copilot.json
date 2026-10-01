@@ -1,0 +1,673 @@
+{
+  "responderUsername": "GitHub Copilot",
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_12cf9034-a64f-414b-ab85-51638c00bf64",
+      "message": {
+        "text": "como puedo aumentar el tamaño de las letras de esta gráfica?",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 60
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 61
+            },
+            "text": "como puedo aumentar el tamaño de las letras de esta gráfica?",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:2_EDA.ipynb",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "external": "vscode-notebook-cell:/Users/chuecos/Documents/Master/TFM/Codigo/Revision03_H_1-12/2_EDA.ipynb#X13sZmlsZQ%3D%3D",
+                "path": "/Users/chuecos/Documents/Master/TFM/Codigo/Revision03_H_1-12/2_EDA.ipynb",
+                "scheme": "vscode-notebook-cell",
+                "fragment": "X13sZmlsZQ=="
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 60,
+                "endColumn": 36,
+                "selectionStartLineNumber": 1,
+                "selectionStartColumn": 1,
+                "positionLineNumber": 60,
+                "positionColumn": 36
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "mcpServersStarting",
+          "didStartServerIds": []
+        },
+        {
+          "kind": "autoModeResolution",
+          "resolved": {
+            "id": "gpt-5.6-luna",
+            "name": "GPT-5.6 Luna"
+          }
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "presentation": "hidden",
+          "invocationMessage": {
+            "value": "Updated todo list",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Updated todo list",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "toolSpecificData": {
+            "kind": "todoList",
+            "todoList": []
+          },
+          "toolCallId": "bb025957-09d3-4574-a0e1-c3a820b432f5",
+          "toolId": "manage_todo_list"
+        },
+        {
+          "kind": "thinking",
+          "value": [],
+          "id": "KVD47TKfb2R5ozZi6UUena0lJjn4WfIf/7JZ6tErduGK6gxXQV453aiL5htD3ukFvCJpjSMcRoI7RurTG++UNCZAPTuJf/8LHp52JvfciUSIDiciK3NmEBbXcK7gIA9X9TbphbU4IRsY7sd2vWrXlu9URmLYGss1tFiOvstCHy9DxBkXadRes3WOGiDYZkyM+Ft8YVazluafL8Ms2Sn2n71fQgr18/wMiOh30XgbFhHcm/BfzmhK7TLzXnr3JdUimixr5c1DLdoCITYGaoiQifylVQDs4loJiZqC/ZNN7o2+ExaS6CZLqWmOGljylifWTHTotM09m3OUic7tDq4WzmgewFwKXjx1ibXXErSBlAAfC1YoEg34aNz8NVof2wjeHI/iTVlStFck2ejU4ClnGifREvcYRioJNd/MHaePjW8wP+Jww/EPgXvxwGRjBt3xDZcuNaLSf0EKiP8kbDgFr4GO1h2PSrVU6TElZIw="
+        },
+        {
+          "kind": "thinking",
+          "value": "",
+          "id": "",
+          "metadata": {
+            "vscodeReasoningDone": true,
+            "stopReason": "text"
+          }
+        },
+        {
+          "value": "Puedes definir tamaños globales antes de crear la figura:\n\n```python\nplt.rcParams.update({\n    'font.size': 12,\n    'axes.titlesize': 14,\n    'axes.labelsize': 12,\n    'xtick.labelsize': 11,\n    'ytick.labelsize': 11,\n    'legend.fontsize': 10,\n})\n```\n\nEn tu gráfica ACF/PACF, también puedes ajustarlos directamente:\n\n```python\nax.set_title(f'{nombre} de la velocidad del viento', fontsize=14)\nax.set_ylabel('Correlación', fontsize=12)\nax.tick_params(axis='both', labelsize=11)\n\naxes[0].legend(fontsize=10)\naxes[1].set_xlabel('Retardo (horas)', fontsize=12)\n```\n\nLa opción global debe colocarse al inicio del notebook, junto a:\n\n```python\nplt.rcParams['figure.figsize'] = (12, 4)\n```",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/Users/chuecos/Documents/Master/TFM/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "extensionVersion": "0.65.0",
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot",
+        "id": "github.copilot.editsAgent",
+        "description": "Edit files in your workspace in agent mode",
+        "when": "config.chat.agent.enabled",
+        "metadata": {
+          "themeIcon": {
+            "id": "tools"
+          },
+          "hasFollowups": false,
+          "supportIssueReporting": false
+        },
+        "name": "agent",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "slashCommands": [
+          {
+            "name": "compact",
+            "description": "Free up context by compacting the conversation history. Optionally include extra instructions for compaction."
+          },
+          {
+            "name": "explain",
+            "description": "Explain how the code in your active editor works"
+          },
+          {
+            "name": "tests",
+            "description": "Generate unit tests for the selected code",
+            "disambiguation": [
+              {
+                "category": "create_tests",
+                "description": "The user wants to generate unit tests.",
+                "examples": [
+                  "Generate tests for my selection using pytest."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fix",
+            "description": "Propose a fix for the problems in the selected code",
+            "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+          },
+          {
+            "name": "new",
+            "description": "Scaffold code for a new file or project in a workspace",
+            "sampleRequest": "Create a RESTful API server using typescript",
+            "isSticky": true,
+            "disambiguation": [
+              {
+                "category": "create_new_workspace_or_extension",
+                "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                "examples": [
+                  "Scaffold a Node server.",
+                  "Create a sample project which uses the fileSystemProvider API.",
+                  "react application"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "newNotebook",
+            "description": "Create a new Jupyter Notebook",
+            "sampleRequest": "How do I create a notebook to load data from a csv file?",
+            "disambiguation": [
+              {
+                "category": "create_jupyter_notebook",
+                "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                "examples": [
+                  "Create a notebook to analyze this CSV file."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "setupTests",
+            "description": "Set up tests in your project (Experimental)",
+            "sampleRequest": "add playwright tests to my project",
+            "when": "config.github.copilot.chat.setupTests.enabled",
+            "disambiguation": [
+              {
+                "category": "set_up_tests",
+                "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                "examples": [
+                  "Set up tests for this project."
+                ]
+              }
+            ]
+          }
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1789669797182,
+      "modelId": "copilot/auto",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_f34bede9-0b0c-4a4a-96a0-cd0a6b944c33",
+      "result": {
+        "timings": {
+          "firstProgress": 10417,
+          "totalElapsed": 11658
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "plt.rcParams.update({\n    'font.size': 12,\n    'axes.titlesize': 14,\n    'axes.labelsize': 12,\n    'xtick.labelsize': 11,\n    'ytick.labelsize': 11,\n    'legend.fontsize': 10,\n})\n",
+              "language": "python",
+              "markdownBeforeBlock": "Puedes definir tamaños globales antes de crear la figura:\n\n"
+            },
+            {
+              "code": "ax.set_title(f'{nombre} de la velocidad del viento', fontsize=14)\nax.set_ylabel('Correlación', fontsize=12)\nax.tick_params(axis='both', labelsize=11)\n\naxes[0].legend(fontsize=10)\naxes[1].set_xlabel('Retardo (horas)', fontsize=12)\n",
+              "language": "python",
+              "markdownBeforeBlock": "\nEn tu gráfica ACF/PACF, también puedes ajustarlos directamente:\n\n"
+            },
+            {
+              "code": "plt.rcParams['figure.figsize'] = (12, 4)\n",
+              "language": "python",
+              "markdownBeforeBlock": "\nLa opción global debe colocarse al inicio del notebook, junto a:\n\n"
+            }
+          ],
+          "renderedUserMessage": [
+            {
+              "type": 1,
+              "text": "<notebookFormatInstructions>\nWhen generating notebook content, use a JSON format. \n1. Each cell must be a valid JSON object within the cells array property with a `metadata.language` property indicating the type of content (e.g., `markdown`, `python`). \n2. Existing cells must contain the `metadata.id` property to uniquely identify each cell. \n3. New cells do not need a `metadata.id` property. \n4. Ensure the content is valid JSON and logically structured. \n5. Do not reference Cell Ids (as users cannot see these values) in user messages, instead use the Cell number (starting from 1). \n\nHere is sample content of a Notebook document:\n\n<example>\n````json\n// filepath: /Users/someone/proj01/example.ipynb\n{\n  cells: [\n    {\n      cell_type: \"markdown\",\n      metadata: {\n          id: \"f8939937\",\n          language: \"markdown\"\n      },\n      source: [\n          \"# Import Required Libraries\",\n          \"Import the necessary libraries, including pandas and plotly.\"\n      ]\n    },\n    {\n      cell_type: \"code\",\n      metadata: {\n          id: \"0b4e03d1\",\n          language: \"python\"\n      },\n      source: [\n          \"# Import Required Libraries\",\n          \"import pandas as pd\",\n          \"import plotly.express as px\"\n      ]\n    }\n  ]\n}\n````\n</example>\n\n</notebookFormatInstructions>\n\nThe following files are notebooks:\n- file:///Users/chuecos/Documents/Master/TFM/Codigo/Revision03_H_1-12/2_EDA.ipynb\n\n<attachments>\n<attachment id=\"file:2_EDA.ipynb\">\nUser's active selection:\nExcerpt from 2_EDA.ipynb, lines 257 to 316:\n```json\n# --- FIGURA: ACF y PACF -------------------------------------------------------\",\n                \"NARANJA = '#E65113'   # naranja corporativo del documento\",\n                \"GRIS    = '#6E6E6E'\",\n                \"AZUL    = '#7FB3D5'\",\n                \"\",\n                \"n_lags = 72\",\n                \"ic = 1.96 / np.sqrt(len(serie))\",\n                \"\",\n                \"fig, axes = plt.subplots(2, 1, figsize=(13, 7), sharex=True)\",\n                \"\",\n                \"for ax, (f, nombre) in zip(axes, [(acf, 'ACF'), (pacf, 'PACF')]):\",\n                \"    vals = f(serie, nlags=n_lags)\",\n                \"\",\n                \"    # stem() devuelve tres artistas (marcadores, tallos, línea base) y ninguno\",\n                \"    # admite color en la llamada: se recolorean después, igual que en el resto\",\n                \"    # de figuras del documento.\",\n                \"    markers, stems, base = ax.stem(range(len(vals)), vals, basefmt=' ')\",\n                \"    markers.set(color=NARANJA, markerfacecolor=NARANJA, markeredgecolor=NARANJA,\",\n                \"                markersize=3.5)\",\n                \"    stems.set(color=NARANJA, linewidth=1.1, alpha=.85)\",\n                \"\",\n                \"    # Banda de significación al 95 %: sombreado gris en lugar de dos líneas\",\n                \"    # rojas, para que no compita visualmente con los datos.\",\n                \"    ax.fill_between([0, n_lags], -ic, ic, color=GRIS, alpha=.18, lw=0,\",\n                \"                    label='banda de significación al 95 %')\",\n                \"    ax.axhline(0, color=GRIS, lw=.9)\",\n                \"\",\n                \"    # Múltiplos de 24 h: marcan dónde aparecería la estacionalidad diaria.\",\n                \"    for j, h in enumerate((24, 48, 72)):\",\n                \"        ax.axvline(h, color=AZUL, ls=':', lw=1.2, alpha=.9,\",\n                \"                   label='múltiplos de 24 h' if j == 0 else None)\",\n                \"\",\n                \"    ax.set_title(f'{nombre} de la velocidad del viento')\",\n                \"    ax.set_ylabel('Correlación')\",\n                \"    ax.set_xlim(-1, n_lags + 1)\",\n                \"    ax.grid(alpha=.3)\",\n                \"    ax.tick_params(labelsize=8)\",\n                \"    ax.title.set_fontsize(10)\",\n                \"    for lado in ('top', 'right'):\",\n                \"        ax.spines[lado].set_visible(False)\",\n                \"\",\n                \"axes[0].legend(fontsize=7.5, frameon=False, loc='upper right')\",\n                \"axes[1].set_xlabel('Retardo (horas)')\",\n                \"\",\n                \"NOMBRE = 'acf_pacf'\",\n                \"\",\n                \"# --- Exportación para la memoria ---------------------------------------------\",\n                \"Path('figuras').mkdir(exist_ok=True)\",\n                \"for _fmt in ('pdf', 'png'):\",\n                \"    fig.savefig(f'figuras/{NOMBRE}.{_fmt}', format=_fmt, dpi=400, bbox_inches='tight')\",\n                \"print(f'figura guardada: figuras/{NOMBRE}.pdf')\",\n                \"\",\n                \"plt.tight_layout(); plt.show()\",\n                \"\",\n                \"vals_acf = acf(serie, nlags=n_lags)\",\n                \"sig = np.where(np.abs(vals_acf) < ic)[0]\",\n                \"print(f'ACF en retardos 1/6/12/24: {vals_acf[1]:.3f} / {vals_acf[6]:.3f} / '\",\n                \"      f'{vals_acf[12]:.3f} / {vals_acf[24]:.3f}')\",\n                \"print(f'Primer retardo NO significativo: {sig[0] if len(sig) else \\\">\\\"+str(n_lags)} '\",\n                \"      '(memoria útil de la serie)')\n```\n</attachment>\n<attachment filePath=\"/Users/chuecos/Documents/Master/TFM/Codigo/Revision03_H_1-12/2_EDA.ipynb\">\nUser's active file for additional context:\n{\n    \"cells\": [\n        {\n            \"cell_type\": \"markdown\",\n            \"id\": \"#VSC-3992243f\",\n            \"metadata\": {\n                \"language\": \"markdown\"\n            },\n            \"source\": [\n                \"# 2 — Preparación de datos, ablación y verificación de HARMONIE\",\n                \"\",\n                \"**Entradas:** `dataset_horario.csv`, `harmonie_crudo.csv` (notebook 1 — ETL)\",\n                \"**Salidas:** `dataset_modelado.csv`, `features_elegidas.json`, `horizontes_validos.json`\",\n                \"\",\n                \"Este notebook no entrena ningún modelo de predicción final. Fija con datos las\",\n                \"decisiones que los notebooks 3–5 dan por supuestas:\",\n                \"\",\n                \"1. **Selección e inventario de variables de HARMONIE** — qué conservar y por qué.\",\n                \"2. **Multicolinealidad y estacionariedad** — órdenes de SARIMA, VIF para SARIMAX/SHAP.\",\n                \"3. **Ciclos y sesgo de HARMONIE** — dónde falla el pronóstico físico y qué puede\",\n                \"   corregir un modelo estadístico.\",\n                \"4. **Codificación cíclica** → genera `dataset_modelado.csv`.\",\n                \"5. **Ablación de features** (atmosféricas, incertidumbre, dirección) con la regla de\",\n                \"   selección de pasada correcta (`lead_min = H + latencia`) → genera\",\n                \"   `features_elegidas.json` y `horizontes_validos.json`.\",\n                \"6. **¿Acierta HARMONIE la dirección?** — explica por qué la dirección observada no\",\n                \"   aporta al modelo.\",\n                \"\",\n                \"> **Nota sobre codificación categórica.** El dataset no tiene variables categóricas:\",\n                \"> `dominio` es constante, y hora/día del año/dirección son magnitudes **cíclicas**\",\n                \"> que se codifican con seno/coseno (sección 4), no con one-hot.\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-5d98e0b8\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"import json\",\n                \"import warnings; warnings.filterwarnings('ignore')\",\n                \"from pathlib import Path\",\n                \"\",\n                \"import numpy as np\",\n                \"import pandas as pd\",\n                \"import matplotlib.pyplot as plt\",\n                \"from statsmodels.tsa.stattools import acf, pacf, adfuller, kpss\",\n                \"from statsmodels.stats.outliers_influence import variance_inflation_factor\",\n                \"from sklearn.model_selection import TimeSeriesSplit\",\n                \"from sklearn.metrics import mean_absolute_error\",\n                \"from xgboost import XGBRegressor\",\n                \"\",\n                \"RUTA = Path('.')\",\n                \"FMT  = '%Y-%m-%d %H:%M:%S'\",\n                \"OBJ  = 'obs_vel'\",\n                \"UMBRAL_ACTIVACION = 11.5   # m/s\",\n                \"plt.rcParams['figure.figsize'] = (12, 4)\",\n                \"\",\n                \"crudo = pd.read_csv(RUTA/'harmonie_crudo.csv', parse_dates=['valida', 'pasada'])\",\n                \"crudo['V']   = np.hypot(crudo.WSPE, crudo.WSPN)\",\n                \"crudo['Dir'] = (np.degrees(np.arctan2(-crudo.WSPE, -crudo.WSPN)) + 360) % 360\",\n                \"\",\n                \"df = pd.read_csv(RUTA/'dataset_horario.csv', index_col='ts', parse_dates=['ts'])\",\n                \"print(f'dataset_horario:  {len(df)} horas, {df.tramo.nunique()} tramos '\",\n                \"      f'({df.index.min()} -> {df.index.max()})')\",\n                \"print(f'harmonie_crudo:    {len(crudo)} filas, lead de {crudo.lead.min()} a {crudo.lead.max()} h')\"\n            ]\n        },\n        {\n            \"cell_type\": \"markdown\",\n            \"id\": \"#VSC-24fc5a4b\",\n            \"metadata\": {\n                \"language\": \"markdown\"\n            },\n            \"source\": [\n                \"---\",\n                \"## 1. Inventario y selección de variables de HARMONIE\",\n                \"\",\n                \"`harmonie_crudo.csv` tiene 19 variables; el ETL solo arrastra 5. Antes de descartar\",\n                \"ninguna se miran con tres criterios medibles — no por intuición:\",\n                \"\",\n                \"1. **Varianza nula** (geográficas/estáticas: un solo nodo de malla).\",\n                \"2. **Cuantización excesiva** (`scale_factor` deja muy pocos valores distintos).\",\n                \"3. **Redundancia con nulos** (dos variables miden lo mismo; se conserva la completa).\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-90db8787\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"# V y Dir son derivadas (velocidad/dirección calculadas de WSPE, WSPN), no variables\",\n                \"# crudas de HARMONIE: se excluyen del inventario de descarte.\",\n                \"META = {'valida', 'pasada', 'lead', 'dominio', 'dist_grados', 'lat_malla', 'lon_malla', 'V', 'Dir'}\",\n                \"vars_h = [c for c in crudo.columns if c not in META]\",\n                \"\",\n                \"inv = pd.DataFrame({\",\n                \"    'n_unicos':  crudo[vars_h].nunique(),\",\n                \"    'std':       crudo[vars_h].std(),\",\n                \"    'pct_nulos': 100 * crudo[vars_h].isna().mean(),\",\n                \"}).round(4)\",\n                \"inv['descarte'] = ''\",\n                \"inv.loc[inv['std'].fillna(0) == 0, 'descarte'] = 'varianza nula'\",\n                \"inv.loc[(inv.n_unicos < 50) & (inv.descarte == ''), 'descarte'] = 'cuantización excesiva'\",\n                \"inv.loc[(inv.pct_nulos > 5) & (inv.descarte == ''), 'descarte'] = 'nulos + redundante'\",\n                \"display(inv.sort_values('n_unicos'))\",\n                \"\",\n                \"DESCARTAR = ['MASK', 'Z', 'SH2M', 'SSR', 'STR']\",\n                \"CONSERVAR = [v for v in vars_h if v not in DESCARTAR]\",\n                \"print(f'\\\\nDescartadas: {DESCARTAR}')\",\n                \"print(f'  MASK, Z    -> constantes (un solo nodo de malla)')\",\n                \"print(f'  SH2M       -> cuantizada a ~30 valores; RH2M mide lo mismo con más resolución')\",\n                \"print(f'  SSR, STR   -> radiación neta con ~10% de nulos; se conservan SSRD/STRD (completas)')\",\n                \"print(f'\\\\nSe conservan {len(CONSERVAR)}: {CONSERVAR}')\",\n                \"print('(WSPE/WSPN = viento; MSLP = gradiente de presión que genera levante/poniente;')\",\n                \"print(' T2M/SST = estabilidad de la capa límite; RH2M/CLFR/PRE/FOG/E = frentes;')\",\n                \"print(' SSRD/STRD = brisa térmica; SSHF/SLHF = flujos de calor)')\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-43210f0c\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"# Reconstruye la selección operativa igual que el ETL, con lead >= 4h (horizonte ~1h),\",\n                \"# y añade las variables conservadas que el ETL todavía no arrastra.\",\n                \"LEAD_MIN_ETL = 4\",\n                \"apto = crudo[crudo.lead >= LEAD_MIN_ETL].sort_values(['valida', 'pasada'])\",\n                \"oper = apto.groupby('valida').last()\",\n                \"\",\n                \"extra = oper[[c for c in CONSERVAR if c not in ('WSPE', 'WSPN')]].copy()\",\n                \"extra.columns = ['H_' + c.lower() for c in extra.columns]\",\n                \"extra.index.name = 'ts'\",\n                \"\",\n                \"nuevas = [c for c in extra.columns if c not in df.columns]\",\n                \"df = df.join(extra[nuevas], how='left')\",\n                \"if nuevas:\",\n                \"    df[nuevas] = df.groupby('tramo')[nuevas].transform(lambda s: s.interpolate(limit_area='inside'))\",\n                \"df = df.dropna()\",\n                \"print(f'{len(nuevas)} variables añadidas: {nuevas}')\",\n                \"print(f'{len(df)} horas tras la unión')\"\n            ]\n        },\n        {\n            \"cell_type\": \"markdown\",\n            \"id\": \"#VSC-8322b7fd\",\n            \"metadata\": {\n                \"language\": \"markdown\"\n            },\n            \"source\": [\n                \"---\",\n                \"## 2. Multicolinealidad\",\n                \"\",\n                \"Irrelevante para árboles (Random Forest, XGBoost), pero crítica para **SARIMAX**\",\n                \"(infla la varianza de los coeficientes) y para interpretar **SHAP** (reparte la\",\n                \"importancia arbitrariamente entre variables correlacionadas). El **VIF** cuantifica\",\n                \"la redundancia de una variable frente a *todas* las demás (VIF > 10 = problemático).\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-a43e57c2\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"predictores = [c for c in df.columns\",\n                \"               if c not in ('tramo', OBJ, 'obs_racha', 'obs_constancia', 'obs_dir')]\",\n                \"\",\n                \"corr_obj = df[predictores + [OBJ]].corr()[OBJ].drop(OBJ).sort_values(key=abs, ascending=False)\",\n                \"print('Correlación de cada predictor con la velocidad observada:')\",\n                \"display(corr_obj.to_frame('corr').round(3))\",\n                \"\",\n                \"fig, ax = plt.subplots(figsize=(10, 8))\",\n                \"M = df[predictores + [OBJ]].corr()\",\n                \"im = ax.imshow(M, cmap='RdBu_r', vmin=-1, vmax=1)\",\n                \"ax.set_xticks(range(len(M))); ax.set_xticklabels(M.columns, rotation=90, fontsize=8)\",\n                \"ax.set_yticks(range(len(M))); ax.set_yticklabels(M.columns, fontsize=8)\",\n                \"plt.colorbar(im, label='correlación de Pearson'); ax.set_title('Matriz de correlación')\",\n                \"plt.show()\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-5cfdbdf0\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"X = df[predictores].dropna()\",\n                \"X = X.loc[:, X.std() > 0]\",\n                \"vif = pd.DataFrame({\",\n                \"    'variable': X.columns,\",\n                \"    'VIF': [variance_inflation_factor(X.values, i) for i in range(X.shape[1])],\",\n                \"}).sort_values('VIF', ascending=False)\",\n                \"vif['problemático'] = np.where(vif.VIF > 10, 'SÍ', '')\",\n                \"display(vif.round(2))\",\n                \"\",\n                \"c = df[predictores].corr().abs()\",\n                \"altos = c.where(np.triu(np.ones(c.shape), 1).astype(bool)).stack().sort_values(ascending=False)\",\n                \"altos = altos[altos > 0.9]\",\n                \"print('Pares con |correlación| > 0.9:')\",\n                \"print(altos.round(3).to_string() if len(altos) else '  ninguno')\"\n            ]\n        },\n        {\n            \"cell_type\": \"markdown\",\n            \"id\": \"#VSC-4c23b304\",\n            \"metadata\": {\n                \"language\": \"markdown\"\n            },\n            \"source\": [\n                \"---\",\n                \"## 3. Estacionariedad, memoria temporal y ciclos\",\n                \"\",\n                \"**Estacionariedad** (sobre el tramo continuo más largo — los huecos rompen la\",\n                \"autocorrelación): ADF (H₀ = no estacionaria) y KPSS (H₀ = estacionaria) son\",\n                \"complementarios; cuando coinciden, la conclusión es sólida.\",\n                \"\",\n                \"**ACF/PACF** fijan los órdenes de SARIMA y cuantifican la memoria útil de la serie.\",\n                \"\",\n                \"**Ciclos diurno y estacional**: si su amplitud es pequeña frente a la desviación\",\n                \"típica global, las variables cíclicas aportarán poco por sí solas al modelo.\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-9937caaf\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"tramo_largo = df.tramo.value_counts().idxmax()\",\n                \"serie = df.loc[df.tramo == tramo_largo, OBJ]\",\n                \"print(f'Tramo {tramo_largo}: {len(serie)} horas continuas '\",\n                \"      f'({serie.index.min()} -> {serie.index.max()})')\",\n                \"\",\n                \"for nombre, s in [('sin diferenciar', serie), ('diferenciada (d=1)', serie.diff().dropna())]:\",\n                \"    p_adf, p_kpss = adfuller(s, autolag='AIC')[1], kpss(s, regression='c', nlags='auto')[1]\",\n                \"    print(f'\\\\n{nombre}:')\",\n                \"    print(f'  ADF  p={p_adf:.4f}  -> {\\\"estacionaria\\\" if p_adf < .05 else \\\"NO estacionaria\\\"}')\",\n                \"    print(f'  KPSS p={p_kpss:.4f}  -> {\\\"NO estacionaria\\\" if p_kpss < .05 else \\\"estacionaria\\\"}')\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-82ccc405\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"# --- FIGURA: ACF y PACF -------------------------------------------------------\",\n                \"NARANJA = '#E65113'   # naranja corporativo del documento\",\n                \"GRIS    = '#6E6E6E'\",\n                \"AZUL    = '#7FB3D5'\",\n                \"\",\n                \"n_lags = 72\",\n                \"ic = 1.96 / np.sqrt(len(serie))\",\n                \"\",\n                \"fig, axes = plt.subplots(2, 1, figsize=(13, 7), sharex=True)\",\n                \"\",\n                \"for ax, (f, nombre) in zip(axes, [(acf, 'ACF'), (pacf, 'PACF')]):\",\n                \"    vals = f(serie, nlags=n_lags)\",\n                \"\",\n                \"    # stem() devuelve tres artistas (marcadores, tallos, línea base) y ninguno\",\n                \"    # admite color en la llamada: se recolorean después, igual que en el resto\",\n                \"    # de figuras del documento.\",\n                \"    markers, stems, base = ax.stem(range(len(vals)), vals, basefmt=' ')\",\n                \"    markers.set(color=NARANJA, markerfacecolor=NARANJA, markeredgecolor=NARANJA,\",\n                \"                markersize=3.5)\",\n                \"    stems.set(color=NARANJA, linewidth=1.1, alpha=.85)\",\n                \"\",\n                \"    # Banda de significación al 95 %: sombreado gris en lugar de dos líneas\",\n                \"    # rojas, para que no compita visualmente con los datos.\",\n                \"    ax.fill_between([0, n_lags], -ic, ic, color=GRIS, alpha=.18, lw=0,\",\n                \"                    label='banda de significación al 95 %')\",\n                \"    ax.axhline(0, color=GRIS, lw=.9)\",\n                \"\",\n                \"    # Múltiplos de 24 h: marcan dónde aparecería la estacionalidad diaria.\",\n                \"    for j, h in enumerate((24, 48, 72)):\",\n                \"        ax.axvline(h, color=AZUL, ls=':', lw=1.2, alpha=.9,\",\n                \"                   label='múltiplos de 24 h' if j == 0 else None)\",\n                \"\",\n                \"    ax.set_title(f'{nombre} de la velocidad del viento')\",\n                \"    ax.set_ylabel('Correlación')\",\n                \"    ax.set_xlim(-1, n_lags + 1)\",\n                \"    ax.grid(alpha=.3)\",\n                \"    ax.tick_params(labelsize=8)\",\n                \"    ax.title.set_fontsize(10)\",\n                \"    for lado in ('top', 'right'):\",\n                \"        ax.spines[lado].set_visible(False)\",\n                \"\",\n                \"axes[0].legend(fontsize=7.5, frameon=False, loc='upper right')\",\n                \"axes[1].set_xlabel('Retardo (horas)')\",\n                \"\",\n                \"NOMBRE = 'acf_pacf'\",\n                \"\",\n                \"# --- Exportación para la memoria ---------------------------------------------\",\n                \"Path('figuras').mkdir(exist_ok=True)\",\n                \"for _fmt in ('pdf', 'png'):\",\n                \"    fig.savefig(f'figuras/{NOMBRE}.{_fmt}', format=_fmt, dpi=400, bbox_inches='tight')\",\n                \"print(f'figura guardada: figuras/{NOMBRE}.pdf')\",\n                \"\",\n                \"plt.tight_layout(); plt.show()\",\n                \"\",\n                \"vals_acf = acf(serie, nlags=n_lags)\",\n                \"sig = np.where(np.abs(vals_acf) < ic)[0]\",\n                \"print(f'ACF en retardos 1/6/12/24: {vals_acf[1]:.3f} / {vals_acf[6]:.3f} / '\",\n                \"      f'{vals_acf[12]:.3f} / {vals_acf[24]:.3f}')\",\n                \"print(f'Primer retardo NO significativo: {sig[0] if len(sig) else \\\">\\\"+str(n_lags)} '\",\n                \"      '(memoria útil de la serie)')\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-a55acb59\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"fig, axes = plt.subplots(1, 3, figsize=(15, 4))\",\n                \"\",\n                \"por_hora = df.groupby(df.index.hour)[OBJ].agg(['mean', 'std'])\",\n                \"axes[0].plot(por_hora.index, por_hora['mean'], marker='o')\",\n                \"axes[0].fill_between(por_hora.index, por_hora['mean'] - por_hora['std'],\",\n                \"                     por_hora['mean'] + por_hora['std'], alpha=.2)\",\n                \"axes[0].set_title('Ciclo diurno'); axes[0].set_xlabel('hora UTC'); axes[0].set_ylabel('m/s')\",\n                \"\",\n                \"por_mes = df.groupby(df.index.month)[OBJ].agg(['mean', 'std'])\",\n                \"axes[1].plot(por_mes.index, por_mes['mean'], marker='o', color='tab:orange')\",\n                \"axes[1].fill_between(por_mes.index, por_mes['mean'] - por_mes['std'],\",\n                \"                     por_mes['mean'] + por_mes['std'], alpha=.2, color='tab:orange')\",\n                \"axes[1].set_title('Ciclo estacional'); axes[1].set_xlabel('mes')\",\n                \"\",\n                \"axes[2].hist(df[OBJ], bins=60, color='tab:green', alpha=.75)\",\n                \"axes[2].axvline(UMBRAL_ACTIVACION, c='r', ls='--', label=f'umbral {UMBRAL_ACTIVACION} m/s')\",\n                \"axes[2].set_title('Distribución de la velocidad'); axes[2].set_xlabel('m/s'); axes[2].legend()\",\n                \"plt.tight_layout(); plt.show()\",\n                \"\",\n                \"print(f'Amplitud ciclo diurno / estacional / std global: '\",\n                \"      f'{por_hora[\\\"mean\\\"].max()-por_hora[\\\"mean\\\"].min():.2f} / '\",\n                \"      f'{por_mes[\\\"mean\\\"].max()-por_mes[\\\"mean\\\"].min():.2f} / {df[OBJ].std():.2f} m/s')\",\n                \"\",\n                \"sectores = pd.cut(df.obs_dir, bins=np.arange(0, 361, 22.5), right=False)\",\n                \"rosa = df.groupby(sectores, observed=True)[OBJ].agg(['mean', 'count', 'max'])\",\n                \"rosa['pct_sobre_umbral'] = df.groupby(sectores, observed=True)[OBJ].apply(\",\n                \"    lambda s: 100 * (s >= UMBRAL_ACTIVACION).mean())\",\n                \"print('\\\\nSectores con viento más fuerte:')\",\n                \"display(rosa.round(2).sort_values('mean', ascending=False).head(4))\",\n                \"print('En Tarifa el levante (E, ~90°) y el poniente (O, ~270°) dominan el viento fuerte.')\"\n            ]\n        },\n        {\n            \"cell_type\": \"markdown\",\n            \"id\": \"#VSC-f97f30c9\",\n            \"metadata\": {\n                \"language\": \"markdown\"\n            },\n            \"source\": [\n                \"---\",\n                \"## 4. Sesgo de HARMONIE — la señal que el modelo debe aprender\",\n                \"\",\n                \"Si HARMONIE no tuviera errores sistemáticos no habría nada que corregir. Se\",\n                \"caracteriza el error (`H_vel - obs_vel`) por intensidad, hora, dirección, lead y\",\n                \"dispersión entre pasadas: estos patrones son los que el modelo estadístico va a\",\n                \"aprender en los notebooks siguientes.\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-7b121ac0\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"df['H_error'] = df.H_vel - df[OBJ]   # positivo = HARMONIE sobrestima\",\n                \"\",\n                \"print(f'Sesgo medio: {df.H_error.mean():+.3f} m/s   '\",\n                \"      f'MAE: {df.H_error.abs().mean():.3f} m/s   '\",\n                \"      f'RMSE: {np.sqrt((df.H_error**2).mean()):.3f} m/s   '\",\n                \"      f'Corr: {df.H_vel.corr(df[OBJ]):.3f}')\",\n                \"\",\n                \"NARANJA = '#E65113'   # naranja corporativo del documento\",\n                \"GRIS    = \\\"#262525\\\"\",\n                \"\",\n                \"fig, axes = plt.subplots(1, 2, figsize=(12, 4))\",\n                \"\",\n                \"axes[0].scatter(df[OBJ], df.H_vel, s=2, alpha=.15, color=NARANJA)\",\n                \"lim = [0, max(df[OBJ].max(), df.H_vel.max())]\",\n                \"axes[0].plot(lim, lim, ls='--', lw=1, color=GRIS)\",\n                \"axes[0].set_xlabel('Velocidad observada (m/s)'); axes[0].set_ylabel('Velocidad HARMONIE (m/s)')\",\n                \"axes[0].set_title('Pronóstico frente a observación')\",\n                \"\",\n                \"por_vel = df.groupby(pd.cut(df[OBJ], bins=np.arange(0, 26, 2.5), right=False),\",\n                \"                     observed=True)['H_error'].mean()\",\n                \"axes[1].bar(range(len(por_vel)), por_vel.values, color=NARANJA, alpha=.85)\",\n                \"axes[1].axhline(0, color=NARANJA, lw=.9)\",\n                \"axes[1].set_xticks(range(len(por_vel)))\",\n                \"axes[1].set_xticklabels([f'{i.left:.0f}' for i in por_vel.index], fontsize=8)\",\n                \"axes[1].set_xlabel('Velocidad observada (m/s)'); axes[1].set_ylabel('Sesgo medio (m/s)')\",\n                \"axes[1].set_title('Sesgo según intensidad del viento')\",\n                \"\",\n                \"plt.show()\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-4a5bfa18\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"print('Sesgo por sector de dirección observada:')\",\n                \"sec = pd.cut(df.obs_dir, bins=np.arange(0, 361, 45), right=False)\",\n                \"display(df.groupby(sec, observed=True)['H_error'].agg(['mean', 'count']).round(3))\",\n                \"\",\n                \"q = pd.qcut(df.H_disp, 4, labels=['baja', 'media-baja', 'media-alta', 'alta'], duplicates='drop')\",\n                \"print('\\\\nMAE de HARMONIE según dispersión entre pasadas (indicador de incertidumbre):')\",\n                \"display(df.groupby(q, observed=True)['H_error'].apply(lambda s: s.abs().mean())\",\n                \"          .round(3).to_frame('MAE'))\",\n                \"print('(si el MAE crece con la dispersión, H_disp sirve para escalar a decisión humana)')\"\n            ]\n        },\n        {\n            \"cell_type\": \"markdown\",\n            \"id\": \"#VSC-b419dec3\",\n            \"metadata\": {\n                \"language\": \"markdown\"\n            },\n            \"source\": [\n                \"---\",\n                \"## 5. Codificación cíclica y salida — `dataset_modelado.csv`\",\n                \"\",\n                \"Hora, día del año y direcciones son magnitudes **circulares**: 23:00 y 00:00 están\",\n                \"a 1 hora, no a 23. Se codifican con `sin(2π·v/periodo)` / `cos(2π·v/periodo)`, que\",\n                \"preserva la distancia angular real (alternativa descartada: one-hot por sectores,\",\n                \"pierde la continuidad y multiplica columnas).\",\n                \"\",\n                \"> **`H_error` no se exporta**: es `H_vel - obs_vel`, contiene el objetivo — incluirla\",\n                \"> como predictor sería una fuga trivial.\",\n                \">\",\n                \"> Lo que este notebook **no** hace, y corresponde a los notebooks de modelado: no\",\n                \"> crea lags (dependen del horizonte), no separa train/val/test ni escala nada, y no\",\n                \"> selecciona features mirando el dataset completo (fuga de información del test).\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-1d77d304\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"d = df.drop(columns=['H_error']).copy()\",\n                \"d['hora_sin'] = np.sin(2*np.pi*d.index.hour/24);      d['hora_cos'] = np.cos(2*np.pi*d.index.hour/24)\",\n                \"d['dia_sin']  = np.sin(2*np.pi*d.index.dayofyear/365); d['dia_cos']  = np.cos(2*np.pi*d.index.dayofyear/365)\",\n                \"for col in ('obs_dir', 'H_dir'):\",\n                \"    r = np.radians(d[col])\",\n                \"    d[f'{col}_sin'], d[f'{col}_cos'] = np.sin(r), np.cos(r)\",\n                \"d = d.drop(columns=['obs_dir', 'H_dir'])\",\n                \"\",\n                \"SALIDA = RUTA / 'dataset_modelado.csv'\",\n                \"d.to_csv(SALIDA, date_format=FMT)\",\n                \"print(f'Guardado: {SALIDA}  ({len(d)} filas x {len(d.columns)} columnas, '\",\n                \"      f'{d.index.min()} -> {d.index.max()})')\"\n            ]\n        },\n        {\n            \"cell_type\": \"markdown\",\n            \"id\": \"#VSC-d511098b\",\n            \"metadata\": {\n                \"language\": \"markdown\"\n            },\n            \"source\": [\n                \"---\",\n                \"## 6. Ablación de features, con la selección de pasada correcta\",\n                \"\",\n                \"**El problema de fuga temporal.** Para predecir la hora `t` con horizonte `H`, la\",\n                \"decisión se toma en `t − H`. Una pasada de HARMONIE emitida en `R` no está\",\n                \"disponible hasta `R + latencia`; para poder usarla:\",\n                \"\",\n                \"$$\\\\text{lead} = t - R \\\\ge H + \\\\text{latencia}$$\",\n                \"\",\n                \"Con latencia de 4h, cada horizonte necesita **su propia selección de pasada**\",\n                \"(`lead_min = H + 4`) — no la columna fija del dataset. HARMONIE se reconstruye\",\n                \"aquí desde `harmonie_crudo.csv` para cada `H`.\",\n                \"\",\n                \"**Conjuntos anidados evaluados** (cada uno añade un bloque, así la mejora es\",\n                \"atribuible al bloque que se acaba de incorporar):\",\n                \"\",\n                \"| Conjunto | Añade | Motivo |\",\n                \"|---|---|---|\",\n                \"| A | lags del anemómetro + cíclicas | baseline: solo historia propia |\",\n                \"| B | + velocidad/dirección/lead de HARMONIE | el pronóstico físico |\",\n                \"| C | + dispersión entre pasadas (incertidumbre) | detector de fiabilidad, no de MAE |\",\n                \"| D | + variables atmosféricas (MSLP, T2M, SST...) | contexto físico que el anemómetro no mide |\",\n                \"| E/F/G | + dirección **observada**, desfasada a `t-H` | ¿ayuda a distinguir levante/poniente? |\",\n                \"\",\n                \"La dirección observada en `t` sería una fuga trivial (es el instante a predecir);\",\n                \"por eso E/F/G siempre la desfasan al horizonte, igual que los lags.\",\n                \"\",\n                \"Validación: `TimeSeriesSplit` con `gap=H` (evita solape feature/objetivo entre\",\n                \"folds) sobre el 80% de desarrollo — el 20% final de test no se toca aquí.\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-4273bc82\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"# ---- Configuración de la ablación ----\",\n                \"LATENCIA   = 4\",\n                \"HORIZONTES = list(range(1, 13))     # H+LATENCIA no puede superar el alcance de HARMONIE (48h)\",\n                \"W          = 24                     # nº de lags\",\n                \"N_SPLITS   = 5\",\n                \"UMBRAL_MEJORA = 1.0                 # % mínimo para justificar un bloque de features\",\n                \"\",\n                \"CICLICAS = ['hora_sin', 'hora_cos', 'dia_sin', 'dia_cos']\",\n                \"HARM_VEL = ['H_vel', 'H_dir_sin', 'H_dir_cos', 'H_lead']\",\n                \"HARM_INC = ['H_disp', 'H_rango', 'H_nruns']\",\n                \"HARM_ATM = ['H_mslp', 'H_t2m', 'H_sst', 'H_rh2m', 'H_clfr', 'H_pre',\",\n                \"            'H_fog', 'H_e', 'H_sshf', 'H_slhf', 'H_ssrd', 'H_strd']\",\n                \"\",\n                \"def harmonie_para(H):\",\n                \"    \\\"\\\"\\\"Selección de pasada que respeta el horizonte H: lead >= H + LATENCIA.\\\"\\\"\\\"\",\n                \"    lead_min = H + LATENCIA\",\n                \"    apto = crudo[crudo.lead >= lead_min].sort_values(['valida', 'pasada'])\",\n                \"    oper = apto.groupby('valida').last()                     # la más fresca que llega a tiempo\",\n                \"    disp = apto.groupby('valida')['V'].agg(['std', 'min', 'max', 'size'])\",\n                \"    h = pd.DataFrame({\",\n                \"        'H_vel': oper['V'], 'H_dir': oper['Dir'], 'H_lead': oper['lead'],\",\n                \"        'H_dir_sin': np.sin(np.radians(oper['Dir'])), 'H_dir_cos': np.cos(np.radians(oper['Dir'])),\",\n                \"        'H_disp': disp['std'].fillna(0), 'H_rango': (disp['max']-disp['min']).fillna(0),\",\n                \"        'H_nruns': disp['size'],\",\n                \"    })\",\n                \"    h.index.name = 'ts'\",\n                \"    return h, lead_min\",\n                \"\",\n                \"def xgb():\",\n                \"    return XGBRegressor(n_estimators=300, max_depth=5, learning_rate=.05,\",\n                \"                        subsample=.8, colsample_bytree=.8, n_jobs=-1, verbosity=0)\",\n                \"\",\n                \"def evaluar_cv(dev, F, gap):\",\n                \"    tscv = TimeSeriesSplit(n_splits=N_SPLITS, gap=gap)\",\n                \"    maes = []\",\n                \"    for i_tr, i_va in tscv.split(dev):\",\n                \"        tr, va = dev.iloc[i_tr], dev.iloc[i_va]\",\n                \"        m = xgb().fit(tr[F], tr[OBJ])\",\n                \"        maes.append(mean_absolute_error(va[OBJ], m.predict(va[F])))\",\n                \"    return np.array(maes)\",\n                \"\",\n                \"h6, lm6 = harmonie_para(6)\",\n                \"print(f'Ejemplo H=6: lead_min={lm6}, {len(h6)} horas, lead medio {h6.H_lead.mean():.1f} h')\"\n            ]\n        },\n        {\n            \"cell_type\": \"markdown\",\n            \"id\": \"#VSC-37d83416\",\n            \"metadata\": {\n                \"language\": \"markdown\"\n            },\n            \"source\": [\n                \"### Ablación por horizonte\",\n                \"\",\n                \"Para cada `H` se reconstruye HARMONIE con la pasada correcta, se generan los lags\",\n                \"y la ventana de dirección desfasada, y se evalúan los conjuntos A/B/C/E/F/G contra\",\n                \"el baseline de HARMONIE en bruto (sin modelo), en los mismos folds.\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-1b0c4875\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"def features_direccion(dh, H):\",\n                \"    \\\"\\\"\\\"Dirección/constancia observadas, SIEMPRE desfasadas a t-H (en t sería fuga).\\\"\\\"\\\"\",\n                \"    g = dh.groupby('tramo')\",\n                \"    sin_t, cos_t = dh['obs_dir_sin'], dh['obs_dir_cos']\",\n                \"\",\n                \"    dh['odir_sin'] = sin_t.groupby(dh['tramo']).shift(H)\",\n                \"    dh['odir_cos'] = cos_t.groupby(dh['tramo']).shift(H)\",\n                \"    DIR1 = ['odir_sin', 'odir_cos']\",\n                \"\",\n                \"    # ventana de 6 desfases consecutivos a partir de H, + rotación (giro con signo entre t-H y t-H-5)\",\n                \"    for j, k in enumerate(range(H, H+6)):\",\n                \"        dh[f'odw_sin{j}'] = sin_t.groupby(dh['tramo']).shift(k)\",\n                \"        dh[f'odw_cos{j}'] = cos_t.groupby(dh['tramo']).shift(k)\",\n                \"    sa, ca, sb, cb = dh['odw_sin0'], dh['odw_cos0'], dh['odw_sin5'], dh['odw_cos5']\",\n                \"    dh['odir_giro'] = np.degrees(np.arctan2(sa*cb - ca*sb, ca*cb + sa*sb))\",\n                \"    DIRW = [f'odw_sin{j}' for j in range(6)] + [f'odw_cos{j}' for j in range(6)] + ['odir_giro']\",\n                \"\",\n                \"    CONS = []\",\n                \"    if 'obs_constancia' in dh.columns:\",\n                \"        dh['ocons'] = g['obs_constancia'].shift(H)\",\n                \"        CONS = ['ocons']\",\n                \"    return DIR1, DIRW, CONS\",\n                \"\",\n                \"resultados, detalle = [], {}\",\n                \"\",\n                \"for H in HORIZONTES:\",\n                \"    harm, lead_min = harmonie_para(H)\",\n                \"    cols_harm_d = [c for c in d.columns if c.startswith('H_')]\",\n                \"    dh = (d.drop(columns=cols_harm_d, errors='ignore')\",\n                \"           .join(harm, how='inner').join(d[HARM_ATM], how='inner'))\",\n                \"\",\n                \"    g = dh.groupby('tramo')\",\n                \"    LAGS = [f'lag{k}' for k in range(H, H+W)]\",\n                \"    for k in range(H, H+W):\",\n                \"        dh[f'lag{k}'] = g[OBJ].shift(k)\",\n                \"    DIR1, DIRW, CONS = features_direccion(dh, H)\",\n                \"    # Se conservan los nombres para la celda de decisión: son idénticos en todos\",\n                \"    # los horizontes (solo cambia el desfase con que se calculan), pero dejarlo\",\n                \"    # explícito evita depender de la variable residual del último ciclo.\",\n                \"    NOMBRES_DIR = {'DIR1': DIR1, 'DIRW': DIRW, 'CONS': CONS}\",\n                \"\",\n                \"    dh = dh.dropna(subset=LAGS + [OBJ] + HARM_VEL)\",\n                \"    if len(dh) < 500:\",\n                \"        print(f'H={H:>3}  lead_min={lead_min:>3}  NO EVALUABLE ({len(dh)} filas)')\",\n                \"        continue\",\n                \"\",\n                \"    C_BASE = LAGS + CICLICAS + HARM_VEL + HARM_INC\",\n                \"    conjuntos = {'A': LAGS + CICLICAS, 'B': LAGS + CICLICAS + HARM_VEL, 'C': C_BASE,\",\n                \"                 'D': C_BASE + HARM_ATM, 'E': C_BASE + DIR1, 'F': C_BASE + DIR1 + DIRW,\",\n                \"                 'G': C_BASE + DIR1 + DIRW + CONS}\",\n                \"    dh = dh.dropna(subset=sorted({f for F in conjuntos.values() for f in F}))\",\n                \"\",\n                \"    dev = dh.iloc[:int(len(dh)*.8)]          # el 20% final se reserva para test\",\n                \"    tscv = TimeSeriesSplit(n_splits=N_SPLITS, gap=H)\",\n                \"    mae_bruto = np.array([mean_absolute_error(dev.iloc[i_va][OBJ], dev.iloc[i_va]['H_vel'])\",\n                \"                          for _, i_va in tscv.split(dev)])\",\n                \"\",\n                \"    res = {nombre: evaluar_cv(dev, F, H) for nombre, F in conjuntos.items()}\",\n                \"    detalle[H] = res\",\n                \"\",\n                \"    fila = {'H': H, 'lead_min': lead_min, 'n_filas': len(dh), 'MAE_bruto': mae_bruto.mean()}\",\n                \"    fila.update({f'MAE_{k}': v.mean() for k, v in res.items()})\",\n                \"    resultados.append(fila)\",\n                \"    print(f'H={H:>3} n={len(dh):>6} bruto={mae_bruto.mean():.3f} ' +\",\n                \"          '  '.join(f'{k}={v.mean():.3f}' for k, v in res.items()))\",\n                \"\",\n                \"tabla = pd.DataFrame(resultados)\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-a24b1606\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"# ¿Es consistente la mejora entre folds, o es ruido? Una mejora que no gana en\",\n                \"# casi todos los folds no es fiable.\",\n                \"print('Comparación fold a fold (cada conjunto frente al anterior):')\",\n                \"for H, res in detalle.items():\",\n                \"    linea = f'H={H:>2}: '\",\n                \"    prev = None\",\n                \"    for k, v in res.items():\",\n                \"        if prev is not None:\",\n                \"            gana = (v < res[prev]).sum()\",\n                \"            marca = 'CONSISTENTE' if gana == len(v) else ('frágil' if gana <= len(v)//2 else '')\",\n                \"            linea += f'{prev}->{k} gana {gana}/{len(v)} {marca}  '\",\n                \"        prev = k\",\n                \"    print(linea)\",\n                \"\",\n                \"COLS = [c for c in tabla.columns if c.startswith('MAE_') and c != 'MAE_bruto']\",\n                \"tabla['correccion_vs_bruto_%'] = 100*(tabla.MAE_bruto - tabla[COLS].min(axis=1))/tabla.MAE_bruto\",\n                \"tabla['aporte_HARMONIE_%']     = 100*(tabla.MAE_A - tabla.MAE_B)/tabla.MAE_A\",\n                \"tabla['aporte_atmosferico_%']  = 100*(tabla.MAE_C - tabla.MAE_D)/tabla.MAE_C if 'MAE_D' in tabla else np.nan\",\n                \"display(tabla.round(3))\",\n                \"\",\n                \"NARANJA = '#E65113'   # naranja corporativo del documento\",\n                \"GRIS    = '#6E6E6E'\",\n                \"\",\n                \"# Ocho series con un mismo color serían indistinguibles. Se emplea una escala de\",\n                \"# azules que progresa con el orden de los conjuntos (A el más claro, G el más\",\n                \"# oscuro), reservando el gris para la referencia sin corregir y el naranja\",\n                \"# corporativo para C, el conjunto que finalmente se adopta.\",\n                \"ESTILO = {\",\n                \"    'MAE_bruto': dict(color=GRIS,      ls='--', marker='s', lw=1.6, label='HARMONIE bruto'),\",\n                \"    'MAE_A':     dict(color='#BBD6E8', ls=':',  marker='^', lw=1.4, label='A · solo historia'),\",\n                \"    'MAE_B':     dict(color='#7FB3D5', ls='-',  marker='v', lw=1.4, label='B · + HARMONIE'),\",\n                \"    'MAE_D':     dict(color='#4A7FA5', ls='-.', marker='D', lw=1.4, label='D · + atmosféricas'),\",\n                \"    'MAE_E':     dict(color='#2E6087', ls='-',  marker='P', lw=1.4, label='E · + dirección'),\",\n                \"    'MAE_F':     dict(color='#1B4869', ls='-',  marker='X', lw=1.4, label='F · + ventana dir.'),\",\n                \"    'MAE_G':     dict(color='#0D2F45', ls='-',  marker='*', lw=1.4, label='G · + constancia'),\",\n                \"    'MAE_C':     dict(color=NARANJA,   ls='-',  marker='o', lw=2.2, label='C · + incertidumbre'),\",\n                \"\",\n                \"}\",\n                \"\",\n                \"fig, axes = plt.subplots(1, 2, figsize=(10, 4.2))\",\n                \"\",\n                \"for col, est in ESTILO.items():\",\n                \"    if col in tabla:\",\n                \"        axes[0].plot(tabla.H, tabla[col], markersize=4.5, **est)\",\n                \"axes[0].set_xlabel('Horizonte (h)'); axes[0].set_ylabel('MAE (m/s)')\",\n                \"axes[0].set_title('MAE por horizonte y conjunto de variables')\",\n                \"axes[0].set_xticks(tabla.H)\",\n                \"axes[0].legend(ncol=2, fontsize=7.5, frameon=False)\",\n                \"axes[0].grid(alpha=.3)\",\n                \"for lado in ('top', 'right'):\",\n                \"    axes[0].spines[lado].set_visible(False)\",\n                \"\",\n                \"axes[1].bar(tabla.H.astype(str), tabla['correccion_vs_bruto_%'],\",\n                \"            color=NARANJA, alpha=.85)\",\n                \"axes[1].axhline(0, color=NARANJA, lw=.9)\",\n                \"axes[1].set_xlabel('Horizonte (h)'); axes[1].set_ylabel('% de mejora sobre HARMONIE bruto')\",\n                \"axes[1].set_title('Corrección que aporta el modelo estadístico')\",\n                \"axes[1].grid(alpha=.3, axis='y')\",\n                \"for lado in ('top', 'right'):\",\n                \"    axes[1].spines[lado].set_visible(False)\",\n                \"\",\n                \"plt.tight_layout(); plt.show()\",\n                \"\",\n                \"print('\\\\nLA CIFRA QUE JUSTIFICA EL TFM (corrección del modelo sobre HARMONIE bruto):')\",\n                \"for _, r in tabla.iterrows():\",\n                \"    print(f'  H={r.H:>2.0f}h: bruto {r.MAE_bruto:.3f} -> modelo {r[COLS].min():.3f} m/s '\",\n                \"          f'({r[\\\"correccion_vs_bruto_%\\\"]:+.1f}%)')\"\n            ]\n        },\n        {\n            \"cell_type\": \"markdown\",\n            \"id\": \"#VSC-d4549843\",\n            \"metadata\": {\n                \"language\": \"markdown\"\n            },\n            \"source\": [\n                \"**Decisión de conjunto D (atmosférico).** Por debajo del 1-2% de mejora sobre C no\",\n                \"compensa el coste (sobreajuste, SHAP más sucio, búsquedas más lentas).\",\n                \"\",\n                \"**Decisión de conjuntos E/F/G (dirección observada).** Si no ganan de forma\",\n                \"consistente (5/5 folds) frente a C, la dirección observada no aporta — se\",\n                \"investiga por qué en la sección 7.\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-02d3c5cc\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"# --- Criterio de selección del conjunto de variables --------------------------\",\n                \"# Se evalúan TODOS los conjuntos, no solo C y D: un criterio que solo pudiera\",\n                \"# elegir entre dos de ellos predeterminaría el resultado con independencia de lo\",\n                \"# que muestren los datos.\",\n                \"#\",\n                \"# El criterio combina dos condiciones, porque el MAE medio por sí solo no basta:\",\n                \"#   1. Mejora media sobre el conjunto de referencia (B, el primero que incorpora\",\n                \"#      el pronóstico físico) superior a UMBRAL_MEJORA.\",\n                \"#   2. CONSISTENCIA entre particiones: la mejora debe darse en todas las\",\n                \"#      particiones de la validación cruzada. Una mejora que aparece en 3 de 5\",\n                \"#      particiones es indistinguible del ruido de partición, y adoptarla\",\n                \"#      equivaldría a sobreajustar la decisión de diseño a una muestra concreta.\",\n                \"# Ante conjuntos equivalentes se prefiere el más simple (menos variables), por\",\n                \"# parsimonia y por coste operativo: cada variable añadida es un dato más que el\",\n                \"# sistema debe tener disponible en producción.\",\n                \"\",\n                \"_D1, _DW, _CO = (NOMBRES_DIR['DIR1'], NOMBRES_DIR['DIRW'], NOMBRES_DIR['CONS'])\",\n                \"_BASE_C = CICLICAS + HARM_VEL + HARM_INC\",\n                \"CONJ_FIJAS = {\",\n                \"    'A': CICLICAS,\",\n                \"    'B': CICLICAS + HARM_VEL,\",\n                \"    'C': _BASE_C,\",\n                \"    'D': _BASE_C + HARM_ATM,\",\n                \"    'E': _BASE_C + _D1,\",\n                \"    'F': _BASE_C + _D1 + _DW,\",\n                \"    'G': _BASE_C + _D1 + _DW + _CO,\",\n                \"}\",\n                \"REFERENCIA = 'B'      # primer conjunto con el pronóstico físico\",\n                \"\",\n                \"# --- 1. Mejora media de cada conjunto sobre la referencia ---------------------\",\n                \"mae_medio = {c[4:]: float(tabla[c].mean()) for c in tabla.columns\",\n                \"             if c.startswith('MAE_') and c != 'MAE_bruto'}\",\n                \"mejora = {k: 100*(mae_medio[REFERENCIA] - v)/mae_medio[REFERENCIA]\",\n                \"          for k, v in mae_medio.items()}\",\n                \"\",\n                \"# --- 2. Consistencia: en cuántas particiones gana cada paso incremental ------\",\n                \"# `detalle[H]` guarda el MAE de cada partición, de modo que puede comprobarse si\",\n                \"# la mejora se sostiene o depende de la partición concreta.\",\n                \"PASOS = [('B', 'C'), ('C', 'D'), ('C', 'E'), ('E', 'F'), ('F', 'G')]\",\n                \"consistencia = {}\",\n                \"for previo, nuevo in PASOS:\",\n                \"    if not all(k in detalle[next(iter(detalle))] for k in (previo, nuevo)):\",\n                \"        continue\",\n                \"    victorias = [int((detalle[H][nuevo] < detalle[H][previo]).sum()) for H in detalle]\",\n                \"    n_folds = len(next(iter(detalle.values()))[nuevo])\",\n                \"    consistencia[f'{previo}->{nuevo}'] = {\",\n                \"        'victorias_medias': float(np.mean(victorias)),\",\n                \"        'folds': n_folds,\",\n                \"        'horizontes_5de5': int(sum(v == n_folds for v in victorias)),\",\n                \"        'horizontes': len(victorias),\",\n                \"    }\",\n                \"\",\n                \"resumen = pd.DataFrame([\",\n                \"    {'conjunto': k, 'n_variables': len(CONJ_FIJAS[k]), 'MAE_medio': mae_medio[k],\",\n                \"     'mejora_vs_B_%': mejora[k]}\",\n                \"    for k in sorted(mae_medio) if k in CONJ_FIJAS\",\n                \"]).sort_values('MAE_medio').reset_index(drop=True)\",\n                \"display(resumen.round(4))\",\n                \"\",\n                \"print('Consistencia de cada paso incremental entre particiones:')\",\n                \"for paso, c in consistencia.items():\",\n                \"    print(f\\\"  {paso:8s} gana en {c['victorias_medias']:.1f}/{c['folds']} particiones de media \\\"\",\n                \"          f\\\"| unanimidad en {c['horizontes_5de5']}/{c['horizontes']} horizontes\\\")\",\n                \"\",\n                \"# --- 3. Decisión -------------------------------------------------------------\",\n                \"# La referencia B es el punto de partida: incorporar el pronóstico físico es la\",\n                \"# única mejora demostrada de forma unánime (paso A->B, 5/5 particiones en los 12\",\n                \"# horizontes), por lo que ningún conjunto por debajo de B se considera.\",\n                \"#\",\n                \"# Un conjunto SUPERA a B solo si cumple las dos condiciones a la vez:\",\n                \"#   - mejora media >= UMBRAL_MEJORA sobre B, y\",\n                \"#   - el paso que lo introduce gana de forma unánime entre particiones en al\",\n                \"#     menos la mitad de los horizontes.\",\n                \"# Entre los que las cumplen se elige el más simple; si ninguno lo hace, se\",\n                \"# conserva el conjunto mínimo que ya está justificado (C, que añade el bloque de\",\n                \"# incertidumbre validado para el esquema Human-in-the-loop).\",\n                \"\",\n                \"def es_consistente(conjunto):\",\n                \"    \\\"\\\"\\\"¿El paso que introduce este conjunto gana de forma unánime entre\",\n                \"    particiones en al menos la mitad de los horizontes evaluados?\\\"\\\"\\\"\",\n                \"    entrantes = [p for p in consistencia if p.endswith(f'->{conjunto}')]\",\n                \"    if not entrantes:\",\n                \"        return False         # sin paso entrante no hay evidencia de mejora\",\n                \"    c = consistencia[entrantes[0]]\",\n                \"    return c['horizontes_5de5'] >= c['horizontes'] / 2\",\n                \"\",\n                \"MINIMO = 'C'      # conjunto por defecto si ninguna ampliación se acredita\",\n                \"candidatos = [k for k in mae_medio\",\n                \"              if k in CONJ_FIJAS and mejora[k] >= UMBRAL_MEJORA and es_consistente(k)]\",\n                \"\",\n                \"if candidatos:\",\n                \"    ELEGIDO = min(candidatos, key=lambda k: (len(CONJ_FIJAS[k]), mae_medio[k]))\",\n                \"    motivo = (f'mejora un {mejora[ELEGIDO]:+.2f}% sobre {REFERENCIA} de forma '\",\n                \"              f'consistente entre particiones')\",\n                \"else:\",\n                \"    ELEGIDO = MINIMO\",\n                \"    mejores = sorted((k for k in mejora if k in CONJ_FIJAS),\",\n                \"                     key=mejora.get, reverse=True)[:3]\",\n                \"    detalle_mejores = ', '.join(f'{k} ({mejora[k]:+.2f}%)' for k in mejores)\",\n                \"    motivo = (f'ninguna ampliación sobre {REFERENCIA} supera el umbral del '\",\n                \"              f'{UMBRAL_MEJORA}% de forma consistente entre particiones; se '\",\n                \"              f'conserva {MINIMO}. Mejores MAE medios: {detalle_mejores}')\",\n                \"\",\n                \"NO_LAG = CONJ_FIJAS[ELEGIDO]\",\n                \"mae_por_conjunto = {c[4:]: float(tabla[c].mean()) for c in tabla.columns if c.startswith('MAE_')}\",\n                \"\",\n                \"with open(RUTA/'features_elegidas.json', 'w') as f:\",\n                \"    json.dump({'conjunto': ELEGIDO, 'motivo': motivo, 'features_sin_lags': NO_LAG,\",\n                \"               'ventana_lags': W, 'referencia': REFERENCIA,\",\n                \"               'umbral_mejora_%': UMBRAL_MEJORA,\",\n                \"               'mae_por_conjunto': mae_por_conjunto,\",\n                \"               'mejora_vs_referencia_%': mejora,\",\n                \"               'consistencia_entre_particiones': consistencia},\",\n                \"              f, indent=2, ensure_ascii=False)\",\n                \"\",\n                \"salida_h = {'latencia_h': LATENCIA, 'regla': 'lead_min = H + LATENCIA',\",\n                \"            'horizonte_maximo_evaluable': 48 - LATENCIA, 'por_horizonte': tabla.to_dict('records')}\",\n                \"with open(RUTA/'horizontes_validos.json', 'w') as f:\",\n                \"    json.dump(salida_h, f, indent=2, ensure_ascii=False, default=float)\",\n                \"\",\n                \"print(f'\\\\nConjunto elegido: {ELEGIDO}')\",\n                \"print(f'Motivo: {motivo}')\",\n                \"print(f'Features fijas ({len(NO_LAG)}): {NO_LAG}')\",\n                \"print('Guardado: features_elegidas.json, horizontes_validos.json')\"\n            ]\n        },\n        {\n            \"cell_type\": \"markdown\",\n            \"id\": \"#VSC-55b62e08\",\n            \"metadata\": {\n                \"language\": \"markdown\"\n            },\n            \"source\": [\n                \"---\",\n                \"## 7. ¿Acierta HARMONIE la dirección del viento?\",\n                \"\",\n                \"El análisis por sector (sección 4) mostró que HARMONIE **subestima el levante en\",\n                \"~3,5 m/s** — el régimen que supera el umbral de activación. Cabría esperar que la\",\n                \"dirección observada ayudase a aplicar esa corrección, pero E/F/G no ganaron de\",\n                \"forma consistente. Dos explicaciones posibles:\",\n                \"\",\n                \"1. **HARMONIE acierta la dirección** → `H_dir_sin/cos` (ya en el conjunto B)\",\n                \"   permiten identificar el régimen; la dirección observada es **redundante**.\",\n                \"2. **HARMONIE falla la dirección**, pero la observada tampoco sirve porque a este\",\n                \"   horizonte ya no predice bien la dirección futura.\",\n                \"\",\n                \"Se distingue midiendo el error angular de HARMONIE frente a la observación (con\",\n                \"`arctan2`, nunca restando grados, porque la dirección es circular: 350°→10° son\",\n                \"20°, no 340°).\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-ce050cb7\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"H_REF = 12\",\n                \"harm, lead_min = harmonie_para(H_REF)\",\n                \"dd = df.drop(columns=['H_error']).drop(columns=['H_vel', 'H_dir'], errors='ignore') \\\\\",\n                \"       .join(harm[['H_vel', 'H_dir']], how='inner').dropna(subset=['H_vel', OBJ])\",\n                \"\",\n                \"dif = np.radians(dd.H_dir - dd.obs_dir)\",\n                \"dd['err_dir_abs'] = np.degrees(np.arctan2(np.sin(dif), np.cos(dif))).abs()\",\n                \"fuerte = dd[dd[OBJ] >= UMBRAL_ACTIVACION]\",\n                \"\",\n                \"print(f'=== ERROR DE DIRECCIÓN DE HARMONIE (H={H_REF}h, lead_min={lead_min}) ===')\",\n                \"print(f'  error absoluto medio          : {dd.err_dir_abs.mean():5.1f} grados')\",\n                \"print(f'  % con error < 30 grados        : {100*(dd.err_dir_abs < 30).mean():5.1f} %')\",\n                \"print(f'  con viento fuerte (>={UMBRAL_ACTIVACION} m/s), n={len(fuerte)}:')\",\n                \"print(f'    error absoluto medio         : {fuerte.err_dir_abs.mean():5.1f} grados')\",\n                \"print(f'    % con error < 30 grados      : {100*(fuerte.err_dir_abs < 30).mean():5.1f} %')\",\n                \"print('  (con calma la dirección es casi aleatoria; con viento fuerte es lo que importa)')\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-04d619fa\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"bins, etq = np.arange(0, 361, 45), ['N-NE','NE-E','E-SE','SE-S','S-SO','SO-O','O-NO','NO-N']\",\n                \"dd['sec_obs'] = pd.cut(dd.obs_dir, bins=bins, labels=etq, right=False)\",\n                \"dd['sec_har'] = pd.cut(dd.H_dir,  bins=bins, labels=etq, right=False)\",\n                \"acierto = (dd.sec_obs == dd.sec_har).mean()\",\n                \"\",\n                \"lev_obs, lev_har = dd.sec_obs.isin(['NE-E','E-SE']), dd.sec_har.isin(['NE-E','E-SE'])\",\n                \"vp, fn = int((lev_obs & lev_har).sum()), int((lev_obs & ~lev_har).sum())\",\n                \"fp = int((~lev_obs & lev_har).sum())\",\n                \"recall, precision = 100*vp/(vp+fn), 100*vp/(vp+fp)\",\n                \"f_obs = lev_obs & (dd[OBJ] >= UMBRAL_ACTIVACION)\",\n                \"recall_fuerte = 100*(f_obs & lev_har).sum()/f_obs.sum() if f_obs.sum() else np.nan\",\n                \"\",\n                \"fig, ax = plt.subplots(figsize=(6, 5))\",\n                \"conf = pd.crosstab(dd.sec_obs, dd.sec_har, normalize='index')\",\n                \"im = ax.imshow(conf, cmap='Blues', vmin=0, vmax=1)\",\n                \"ax.set_xticks(range(len(etq))); ax.set_xticklabels(etq, rotation=45)\",\n                \"ax.set_yticks(range(len(etq))); ax.set_yticklabels(etq)\",\n                \"ax.set_xlabel('sector pronosticado'); ax.set_ylabel('sector observado')\",\n                \"ax.set_title(f'Sector correcto: {100*acierto:.1f}% (azar = 12.5%)')\",\n                \"plt.colorbar(im)\",\n                \"plt.show()\",\n                \"\",\n                \"print(f'Detección del LEVANTE: recall {recall:.1f}%  precisión {precision:.1f}%  '\",\n                \"      f'recall con viento fuerte {recall_fuerte:.1f}%')\",\n                \"\",\n                \"print()\",\n                \"if dd.err_dir_abs.mean() < 40 and acierto > 0.45:\",\n                \"    print('CONCLUSIÓN: HARMONIE acierta el régimen (levante/poniente) aunque no la')\",\n                \"    print('dirección exacta. La dirección observada es REDUNDANTE frente a H_dir_sin/cos,')\",\n                \"    print('que ya están en el conjunto B — de ahí que E/F/G no aporten.')\",\n                \"else:\",\n                \"    print('CONCLUSIÓN: HARMONIE NO acierta bien la dirección; E/F/G fallan por otra razón')\",\n                \"    print('(probablemente la dirección observada en t-H ya no predice la de t a este horizonte).')\",\n                \"print('DECISIÓN: conjunto elegido para modelado =', ELEGIDO, '(no cambia con este resultado;')\",\n                \"print('lo que cambia es la explicación: HARMONIE reproduce el régimen del Estrecho pero')\",\n                \"print('subestima la intensidad del levante en ~3.5 m/s, y el modelo corrige ese sesgo')\",\n                \"print('condicionado al régimen.)')\"\n            ]\n        },\n        {\n            \"cell_type\": \"markdown\",\n            \"id\": \"#VSC-b62765bb\",\n            \"metadata\": {\n                \"language\": \"markdown\"\n            },\n            \"source\": [\n                \"---\",\n                \"## Resumen para la memoria\",\n                \"\",\n                \"| Decisión | Valor | Justificación |\",\n                \"|---|---|---|\",\n                \"| Variables de HARMONIE | 14 de 19 conservadas | varianza nula / cuantización / redundancia con nulos |\",\n                \"| Codificación categórica | ninguna (seno/coseno) | no hay variables categóricas; hora/día/dirección son cíclicas |\",\n                \"| Tramo para SARIMA | el más largo | continuidad requerida por ACF/PACF/ADF/KPSS |\",\n                \"| Selección de pasada | `lead >= H + 4` | evita usar pronósticos emitidos después del instante de decisión |\",\n                \"| Horizonte máximo evaluable | 44 h | alcance de HARMONIE (48h) − latencia (4h) |\",\n                \"| Conjunto de features | el mejor entre A-G, por evidencia | el bloque atmosférico y la dirección observada no superan el ruido entre folds |\",\n                \"| `H_disp` | se conserva | no mejora el MAE, pero sirve de detector de incertidumbre (Human-in-the-loop) |\",\n                \"| Dirección observada | descartada como predictor | redundante: HARMONIE ya acierta el régimen |\",\n                \"\",\n                \"**Advertencia metodológica.** Los MAE de distintos horizontes se calculan sobre\",\n                \"**muestras distintas** (el dataset encoge al exigir mayor `lead_min`); las\",\n                \"comparaciones entre horizontes son indicativas, no estrictas.\",\n                \"\",\n                \"**Ficheros generados:**\",\n                \"\",\n                \"| Fichero | Consumido por |\",\n                \"|---|---|\",\n                \"| `dataset_modelado.csv` | notebooks 3, 4, 5 (modelado) |\",\n                \"| `features_elegidas.json` | referencia del conjunto de variables elegido |\",\n                \"| `horizontes_validos.json` | referencia de la regla `lead_min = H + latencia` |\",\n                \"\",\n                \"**Siguiente notebook:** 3 — Baselines estadísticos (persistencia, SARIMA, SARIMAX).\"\n            ]\n        },\n        {\n            \"cell_type\": \"code\",\n            \"id\": \"#VSC-59dc4494\",\n            \"metadata\": {\n                \"language\": \"python\"\n            },\n            \"source\": [\n                \"print(f'MAE de HARMONIE bruto a batir : {df.H_error.abs().mean():.3f} m/s')\",\n                \"print(f'Sesgo de HARMONIE              : {df.H_error.mean():+.3f} m/s')\",\n                \"print(f'Conjunto de features elegido   : {ELEGIDO} ({motivo})')\"\n            ]\n        }\n    ]\n}\n</attachment>\n\n</attachments>\n<context>\nThe current date is 2026-09-17.\nTerminals:\nTerminal: zsh\n\n</context>\n<editorContext>\nThe user's current notebook is /Users/chuecos/Documents/Master/TFM/Codigo/Revision03_H_1-12/2_EDA.ipynb. The current selection is from line 257 to line 316.\n</editorContext>\n<reminderInstructions>\nYou are an agent—keep going until the user's query is completely resolved before ending your turn. ONLY stop if solved or genuinely blocked.\nTake action when possible; the user expects you to do useful work without unnecessary questions.\nAfter any parallel, read-only context gathering, give a concise progress update and what's next.\nAvoid repetition across turns: don't restate unchanged plans or sections (like the todo list) verbatim; provide delta updates or only the parts that changed.\nTool batches: You MUST preface each batch with a one-sentence why/what/outcome preamble.\nProgress cadence: After 3 to 5 tool calls, or when you create/edit > ~3 files in a burst, report progress.\nRequirements coverage: Read the user's ask in full and think carefully. Do not omit a requirement. If something cannot be done with available tools, note why briefly and propose a viable alternative.\n\nIMPORTANT: Before calling any deferred tool that was not previously returned by tool_search, you MUST first use tool_search to load it. Calling a deferred tool without first loading it will fail. Tools returned by tool_search are automatically expanded and immediately available - do not search for them again.\nDo not show Cell IDs to the user.\n\n</reminderInstructions>\n<userRequest>\ncomo puedo aumentar el tamaño de las letras de esta gráfica?\n</userRequest>\n"
+            },
+            {
+              "type": 3,
+              "cacheType": "ephemeral"
+            }
+          ],
+          "renderedGlobalContext": [
+            {
+              "type": 1,
+              "text": "<environment_info>\nThe user's current OS is: macOS\n</environment_info>\n<workspace_info>\nI am working in a workspace with the following folders:\n- /Users/chuecos/Documents/Master/TFM \nI am working in a workspace that has the following structure:\n```\nTFM_abstract_actualizado.tex\nTFM_capitulos_actualizados.tex\nTFM_completo.tex\nBibliografia/\nCodigo/\n\tpruebas/\n\t\tcomparacion_opcionA_vs_B.csv\n\t\tcomparar_opcionA_vs_opcionB.ipynb\n\t\tdataset_modelado.csv\n\t\tharmonie_crudo.csv\n\t\tmetricas_opcionA.csv\n\t\tmetricas_opcionB.csv\n\t\topcionA_12_modelos_por_hora.ipynb\n\t\topcionB_modelo_unico_condicionado_H.ipynb\n\tRevision01/\n\t\t1_ETL.ipynb\n\t\t2_preparacion_EDA.ipynb\n\t\t2b_ablacion_variables.ipynb\n\t\t2c_horizonte_correcto.ipynb\n\t\t2d_verificar_direccion.ipynb\n\t\t3_baselines_estadisticos.ipynb\n\t\t4_modelos_ML.ipynb\n\t\t4b_afinado_ML.ipynb\n\t\t5_modelos_DL.ipynb\n\t\t5b_afinado_DL.ipynb\n\t\t6_ensemble_diebold_mariano.ipynb\n\t\t7_MLOps_tracking.ipynb\n\t\tactual_prueba.csv\n\t\tanalizar_negativas.py\n\t\tapp.py\n\t\tbaselines_metricas.csv\n\t\tcomparacion_final.csv\n\t\tdataset_horario.csv\n\t\tdataset_modelado.csv\n\t\tdataset_modelado.csv.dvc\n\t\tdiebold_mariano.csv\n\t\tdl_mejor_modelo.json\n\t\tdocker-compose.yml\n\t\tDockerfile\n\t\tdvc_setup.md\n\t\tESTADO_PROYECTO.md\n\t\tevidently_monitor.py\n\t\tfeatures_elegidas.json\n\t\tharmonie_crudo.csv\n\t\tharmonie_crudo.csv.dvc\n\t\thorizontes_validos.json\n\t\tml_mejor_modelo.json\n\t\tmodelo_produccion.json\n\t\tobservaciones_horarias.csv\n\t\tobservaciones_horarias.csv.dvc\n\t\tref_prueba.csv\n\t\trequirements.txt\n\t\tstreamlit_dashboard.py\n\t\tHistorico/\n\t\tinformes/\n\t\tmlruns/\n\t\tmodelo_export/\n\tRevision02/\n\t\t1_ETL.ipynb\n\t\t2_EDA.ipynb\n\t\t3_SARIMA.ipynb\n\t\t4_ML.ipynb\n\t\t5_DL.ipynb\n\t\t6_ensemble_diebold_mariano.ipynb\n\t\t7_MLOps_tracking.ipynb\n\t\tactual_prueba.csv\n\t\tapp.py\n\t\tbaselines_metricas.csv\n\t\tcomparacion_final.csv\n\t\tdataset_horario.csv\n\t\tdataset_modelado.csv\n\t\tdataset_modelado.csv.dvc\n\t\tdiebold_mariano.csv\n\t\tdl_mejor_modelo.json\n\t\tdocker-compose.yml\n\t\tDockerfile\n\t\tdvc_setup.md\n\t\tevidently_monitor.py\n\t\tfeatures_elegidas.json\n\t\tharmonie_crudo.csv\n\t\tharmonie_crudo.csv.dvc\n\t\thorizontes_validos.json\n\t\tml_mejor_modelo.json\n\t\tmodelo_produccion.json\n\t\t...\n\tRevision03_H_1-12/\nHarmonieArome/\n\textraer_harmonie.py\n\tdescargas_1787733996/\nimgs/\n\tdespliegue/\n\tdiebold/\n\tdl/\n\teda/\n\tml/\n\tsarima/\n```\nThis is the state of the context at this point in the conversation. The view of the workspace structure may be truncated. You can use tools to collect more context if needed.\n</workspace_info>\n<userMemory>\nThe following are your persistent user memory notes. These persist across all workspaces and conversations.\n\n## notebook_issues.md\n- In this workspace, the notebook kernel runs Python 3.14.4.\n- TensorFlow is not installable here via pip; no compatible distribution was found.\n- Keras imports can fail because they try to load TensorFlow internally.\n- For notebooks in this environment, prefer sklearn/pandas/matplotlib or another backend that is already installed.\n</userMemory>\n<sessionMemory>\nSession memory (/memories/session/) is empty. No session notes have been created yet.\n</sessionMemory>\n<repoMemory>\nRepository memory (/memories/repo/) is empty. No workspace-scoped notes have been created yet.\n</repoMemory>\n<availableDeferredTools>\nAvailable deferred tools (must be loaded with tool_search before use):\nclick_element\nconfigure_notebook\nconfigure_python_environment\ncontainer-tools_get-config\ncopilot_getNotebookSummary\ncreate_and_run_task\ncreate_directory\ncreate_new_jupyter_notebook\ncreate_new_workspace\ndrag_element\nedit_notebook_file\nget_python_environment_details\nget_python_executable_details\nget_task_output\nget_vscode_api\ngithub_repo\ngithub_text_search\nhandle_dialog\nhover_element\ninstall_extension\ninstall_python_packages\nmcp_pylance_mcp_s_pylanceAnalyze\nmcp_pylance_mcp_s_pylanceCheckSignatureCompatibility\nmcp_pylance_mcp_s_pylanceDocuments\nmcp_pylance_mcp_s_pylanceFileSyntaxErrors\nmcp_pylance_mcp_s_pylanceImports\nmcp_pylance_mcp_s_pylanceInstalledTopLevelModules\nmcp_pylance_mcp_s_pylanceInvokeRefactoring\nmcp_pylance_mcp_s_pylanceLSP\nmcp_pylance_mcp_s_pylancePythonDebug\nmcp_pylance_mcp_s_pylancePythonEnvironments\nmcp_pylance_mcp_s_pylancePythonProfileExplorer\nmcp_pylance_mcp_s_pylancePythonProfiling\nmcp_pylance_mcp_s_pylanceRunCodeSnippet\nmcp_pylance_mcp_s_pylanceSemanticContext\nmcp_pylance_mcp_s_pylanceSettings\nmcp_pylance_mcp_s_pylanceSyntaxErrors\nmcp_pylance_mcp_s_pylanceUpdatePythonEnvironment\nmcp_pylance_mcp_s_pylanceWorkspaceRoots\nmcp_pylance_mcp_s_pylanceWorkspaceUserFiles\nnavigate_page\nnotebook_install_packages\nnotebook_list_packages\nopen_browser_page\nread_notebook_cell_output\nread_page\nresolve_memory_file_uri\nrun_notebook_cell\nrun_playwright_code\nrun_vscode_command\nscreenshot_page\nterminal_last_command\nterminal_selection\ntestFailure\ntype_in_page\nvscode_searchExtensions_internal\n</availableDeferredTools>\n"
+            },
+            {
+              "type": 3,
+              "cacheType": "ephemeral"
+            }
+          ],
+          "cacheKey": "file:///Users/chuecos/Documents/Master/TFM",
+          "promptTokens": 34378,
+          "outputTokens": 356,
+          "toolCallRounds": [
+            {
+              "response": "Puedes definir tamaños globales antes de crear la figura:\n\n```python\nplt.rcParams.update({\n    'font.size': 12,\n    'axes.titlesize': 14,\n    'axes.labelsize': 12,\n    'xtick.labelsize': 11,\n    'ytick.labelsize': 11,\n    'legend.fontsize': 10,\n})\n```\n\nEn tu gráfica ACF/PACF, también puedes ajustarlos directamente:\n\n```python\nax.set_title(f'{nombre} de la velocidad del viento', fontsize=14)\nax.set_ylabel('Correlación', fontsize=12)\nax.tick_params(axis='both', labelsize=11)\n\naxes[0].legend(fontsize=10)\naxes[1].set_xlabel('Retardo (horas)', fontsize=12)\n```\n\nLa opción global debe colocarse al inicio del notebook, junto a:\n\n```python\nplt.rcParams['figure.figsize'] = (12, 4)\n```",
+              "toolCalls": [],
+              "toolInputRetry": 0,
+              "id": "759348ff-f39e-4671-a5d4-ed0815e86226",
+              "statefulMarker": "soRycFlY69bm6tckEzfbjuA203nggj3CN8Jv+KEH+fHHmKmkBVaGXeQvSKRiUTa+fJ9svb956OCv2X1cvaZ+oDTeoaV/C0D9ultbd2Izt7KfImyHVkKOEMc3lrRhMot4W+haqFn+cSefis9jzzSLd33kvnQl5JHf0EHEPwh8lsIePm1lSrZD+A897JCAl5yCLifkrbvkw7ABIjx99YFzu6Nqh2FEkoy+NCnHLO+N7zs/F6pkCl/gmo4g/4MlcPe3xZQLfq5AnnMUhyCaybs3zQnOwXVTaZp5p//5u2et3wsmQKkM2++0VwXGFevewD6D2oyXZtL7VOXKV+GFMa6arnJi3pq6yClKw386lq3vXM96nZfkM532XlWtk7EsczoRY35TA0/wEvd0x2GmGROlYOAmXwOY0dE6u4OwuxbAEQxeyFRjviA0OISUZR8pVkQirFnPXCnnRf3bRSIJ431swzEnw+WxX37Fo0UWMJvKtA==",
+              "thinking": {
+                "id": "KVD47TKfb2R5ozZi6UUena0lJjn4WfIf/7JZ6tErduGK6gxXQV453aiL5htD3ukFvCJpjSMcRoI7RurTG++UNCZAPTuJf/8LHp52JvfciUSIDiciK3NmEBbXcK7gIA9X9TbphbU4IRsY7sd2vWrXlu9URmLYGss1tFiOvstCHy9DxBkXadRes3WOGiDYZkyM+Ft8YVazluafL8Ms2Sn2n71fQgr18/wMiOh30XgbFhHcm/BfzmhK7TLzXnr3JdUimixr5c1DLdoCITYGaoiQifylVQDs4loJiZqC/ZNN7o2+ExaS6CZLqWmOGljylifWTHTotM09m3OUic7tDq4WzmgewFwKXjx1ibXXErSBlAAfC1YoEg34aNz8NVof2wjeHI/iTVlStFck2ejU4ClnGifREvcYRioJNd/MHaePjW8wP+Jww/EPgXvxwGRjBt3xDZcuNaLSf0EKiP8kbDgFr4GO1h2PSrVU6TElZIw=",
+                "text": [],
+                "encrypted": "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",
+                "tokens": 151
+              },
+              "timestamp": 1789669810135,
+              "phase": "final_answer",
+              "modelId": "gpt-5.6-luna"
+            }
+          ],
+          "resolvedModel": "gpt-5.6-luna",
+          "modelMessageId": "0f2b5b7c-bd17-4acf-96ba-dd3d7f6965ff",
+          "responseId": "1f0cc055-34ab-452e-9b9b-e7db40fe393a",
+          "sessionId": "0bc60da0-3e88-4b6e-9d2b-64c65784ddd5",
+          "agentId": "github.copilot.editsAgent"
+        },
+        "details": "GPT-5.6 Luna • 0.8 credits"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-a88fdbdb-2dfa-413c-9ad6-40ddff6d0821"
+        },
+        {
+          "suggestionId": "sgt-b51844b4-b0d2-4a4b-bf50-9311cedd9846"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1789669810141
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1789669797182,
+      "timeSpentWaiting": 1789669797182,
+      "promptTokens": 34378,
+      "completionTokens": 356,
+      "outputBuffer": 128000,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System Instructions",
+          "percentageOfPrompt": 21
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 42
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 3
+        },
+        {
+          "category": "User Context",
+          "label": "Files",
+          "percentageOfPrompt": 33
+        }
+      ],
+      "copilotCredits": 0.8119395,
+      "elapsedMs": 12959
+    },
+    {
+      "requestId": "request_78245431-5a11-473b-87fa-ff1a37d5e6a8",
+      "message": {
+        "text": "por que correlación no sale a la msima ditancia del eje en el primer eje y en el segundo?",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 89
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 90
+            },
+            "text": "por que correlación no sale a la msima ditancia del eje en el primer eje y en el segundo?",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": []
+      },
+      "response": [
+        {
+          "kind": "mcpServersStarting",
+          "didStartServerIds": []
+        },
+        {
+          "kind": "toolInvocationSerialized",
+          "presentation": "hidden",
+          "invocationMessage": {
+            "value": "Updated todo list",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "pastTenseMessage": {
+            "value": "Updated todo list",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "supportAlertSyntax": false
+          },
+          "isConfirmed": {
+            "type": 1
+          },
+          "isComplete": true,
+          "source": {
+            "type": "internal",
+            "label": "Built-In"
+          },
+          "toolSpecificData": {
+            "kind": "todoList",
+            "todoList": []
+          },
+          "toolCallId": "35f262dc-4662-4433-a03b-6cb6320f3b12",
+          "toolId": "manage_todo_list"
+        },
+        {
+          "kind": "thinking",
+          "value": [],
+          "id": "LuhtTZ1hp2tbe4RrV6IjMciP4i3Zu8/jbl3nLUA5d9Og5U/Zv/e/jiyDG4xbaEgSgehETSebvBk21spJ8auQMddb72oEc+7pnDo7yjkhXCkfbw6s61PfdfE/tTJUWcSXBeTCOblb6DJ6f1V/aPH3P1VFX+8OqObU3X1IMMvlgnnPv8Khoh6hnKtjb9tFLtL1Mo22xLtBsAfKpuPIKgMtLJyahBAm4Yb68cGVcCA7TYob0QekROvCi+8sYWH+m6xSNBhe/nY6pTrkBEKqrFyS9Jds5ahGcyK1Itbnwzd3ZuLZTtGkEUWgB/Tcgl8udAMhrF1givd3i+O5rMs7FG7ff39xcWbuBqm8yRpm9cvFP4CXT/E9tEfVoDDRTH/z4iBELxJxM8vsH09JCYc5W7h47arhnH4xYEiDJa843sSYxE04CGt6zJ3cweNt+T6FK3SAh8D3wf8EiQD346nDNPRlDvlT0SMz5fYP04cSP5E="
+        },
+        {
+          "kind": "thinking",
+          "value": "",
+          "id": "",
+          "metadata": {
+            "vscodeReasoningDone": true,
+            "stopReason": "text"
+          }
+        },
+        {
+          "value": "Porque ambos subgráficos comparten únicamente el eje X:\n\n```python\nfig, axes = plt.subplots(2, 1, figsize=(13, 7), sharex=True)\n```\n\nCada eje Y tiene una escala automática distinta según los valores de ACF y PACF. Por eso la etiqueta **“Correlación”** puede aparecer a diferente distancia visual.\n\nSi quieres que ambos ejes tengan la misma escala, añade dentro del bucle:\n\n```python\nax.set_ylim(-1, 1)\n```\n\nTambién puedes compartir el eje Y:\n\n```python\nfig, axes = plt.subplots(\n    2, 1,\n    figsize=(13, 7),\n    sharex=True,\n    sharey=True\n)\n```\n\nPara ACF y PACF, la opción más clara suele ser:\n\n```python\nax.set_ylim(-1, 1)\n```\n\nAsí ambos gráficos representan la correlación con la misma referencia visual.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/Users/chuecos/Documents/Master/TFM/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "extensionVersion": "0.65.0",
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot",
+        "id": "github.copilot.editsAgent",
+        "description": "Edit files in your workspace in agent mode",
+        "when": "config.chat.agent.enabled",
+        "metadata": {
+          "themeIcon": {
+            "id": "tools"
+          },
+          "hasFollowups": false,
+          "supportIssueReporting": false
+        },
+        "name": "agent",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "agent"
+        ],
+        "slashCommands": [
+          {
+            "name": "compact",
+            "description": "Free up context by compacting the conversation history. Optionally include extra instructions for compaction."
+          },
+          {
+            "name": "explain",
+            "description": "Explain how the code in your active editor works"
+          },
+          {
+            "name": "tests",
+            "description": "Generate unit tests for the selected code",
+            "disambiguation": [
+              {
+                "category": "create_tests",
+                "description": "The user wants to generate unit tests.",
+                "examples": [
+                  "Generate tests for my selection using pytest."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fix",
+            "description": "Propose a fix for the problems in the selected code",
+            "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+          },
+          {
+            "name": "new",
+            "description": "Scaffold code for a new file or project in a workspace",
+            "sampleRequest": "Create a RESTful API server using typescript",
+            "isSticky": true,
+            "disambiguation": [
+              {
+                "category": "create_new_workspace_or_extension",
+                "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                "examples": [
+                  "Scaffold a Node server.",
+                  "Create a sample project which uses the fileSystemProvider API.",
+                  "react application"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "newNotebook",
+            "description": "Create a new Jupyter Notebook",
+            "sampleRequest": "How do I create a notebook to load data from a csv file?",
+            "disambiguation": [
+              {
+                "category": "create_jupyter_notebook",
+                "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                "examples": [
+                  "Create a notebook to analyze this CSV file."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "setupTests",
+            "description": "Set up tests in your project (Experimental)",
+            "sampleRequest": "add playwright tests to my project",
+            "when": "config.github.copilot.chat.setupTests.enabled",
+            "disambiguation": [
+              {
+                "category": "set_up_tests",
+                "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                "examples": [
+                  "Set up tests for this project."
+                ]
+              }
+            ]
+          }
+        ],
+        "disambiguation": []
+      },
+      "timestamp": 1789670130978,
+      "modelId": "copilot/auto",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "telemetryModeId": "agent",
+        "telemetryModeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_8c3d0896-87f0-4daf-9594-184fb81bb00c",
+      "result": {
+        "timings": {
+          "firstProgress": 4425,
+          "totalElapsed": 5905
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "fig, axes = plt.subplots(2, 1, figsize=(13, 7), sharex=True)\n",
+              "language": "python",
+              "markdownBeforeBlock": "Porque ambos subgráficos comparten únicamente el eje X:\n\n"
+            },
+            {
+              "code": "ax.set_ylim(-1, 1)\n",
+              "language": "python",
+              "markdownBeforeBlock": "\nCada eje Y tiene una escala automática distinta según los valores de ACF y PACF. Por eso la etiqueta **“Correlación”** puede aparecer a diferente distancia visual.\n\nSi quieres que ambos ejes tengan la misma escala, añade dentro del bucle:\n\n"
+            },
+            {
+              "code": "fig, axes = plt.subplots(\n    2, 1,\n    figsize=(13, 7),\n    sharex=True,\n    sharey=True\n)\n",
+              "language": "python",
+              "markdownBeforeBlock": "\nTambién puedes compartir el eje Y:\n\n"
+            },
+            {
+              "code": "ax.set_ylim(-1, 1)\n",
+              "language": "python",
+              "markdownBeforeBlock": "\nPara ACF y PACF, la opción más clara suele ser:\n\n"
+            }
+          ],
+          "renderedUserMessage": [
+            {
+              "type": 1,
+              "text": "<context>\nThe current date is 2026-09-17.\nTerminals:\nTerminal: zsh\n\n</context>\n<editorContext>\nThe user's current notebook is /Users/chuecos/Documents/Master/TFM/Codigo/Revision03_H_1-12/2_EDA.ipynb. The current selection is from line 257 to line 316.\n</editorContext>\n<reminderInstructions>\nYou are an agent—keep going until the user's query is completely resolved before ending your turn. ONLY stop if solved or genuinely blocked.\nTake action when possible; the user expects you to do useful work without unnecessary questions.\nAfter any parallel, read-only context gathering, give a concise progress update and what's next.\nAvoid repetition across turns: don't restate unchanged plans or sections (like the todo list) verbatim; provide delta updates or only the parts that changed.\nTool batches: You MUST preface each batch with a one-sentence why/what/outcome preamble.\nProgress cadence: After 3 to 5 tool calls, or when you create/edit > ~3 files in a burst, report progress.\nRequirements coverage: Read the user's ask in full and think carefully. Do not omit a requirement. If something cannot be done with available tools, note why briefly and propose a viable alternative.\n\nIMPORTANT: Before calling any deferred tool that was not previously returned by tool_search, you MUST first use tool_search to load it. Calling a deferred tool without first loading it will fail. Tools returned by tool_search are automatically expanded and immediately available - do not search for them again.\n\n</reminderInstructions>\n<userRequest>\npor que correlación no sale a la msima ditancia del eje en el primer eje y en el segundo?\n</userRequest>\n"
+            },
+            {
+              "type": 3,
+              "cacheType": "ephemeral"
+            }
+          ],
+          "promptTokens": 34944,
+          "outputTokens": 270,
+          "toolCallRounds": [
+            {
+              "response": "Porque ambos subgráficos comparten únicamente el eje X:\n\n```python\nfig, axes = plt.subplots(2, 1, figsize=(13, 7), sharex=True)\n```\n\nCada eje Y tiene una escala automática distinta según los valores de ACF y PACF. Por eso la etiqueta **“Correlación”** puede aparecer a diferente distancia visual.\n\nSi quieres que ambos ejes tengan la misma escala, añade dentro del bucle:\n\n```python\nax.set_ylim(-1, 1)\n```\n\nTambién puedes compartir el eje Y:\n\n```python\nfig, axes = plt.subplots(\n    2, 1,\n    figsize=(13, 7),\n    sharex=True,\n    sharey=True\n)\n```\n\nPara ACF y PACF, la opción más clara suele ser:\n\n```python\nax.set_ylim(-1, 1)\n```\n\nAsí ambos gráficos representan la correlación con la misma referencia visual.",
+              "toolCalls": [],
+              "toolInputRetry": 0,
+              "id": "2cbdb1d9-146d-451d-92ed-eb9b368fa241",
+              "statefulMarker": "FVHrvSAYCr99Ieo67TC+rq5Ldz4/eGk+5bLtj0oHbfvibn0lFDh1h3fm43D+FYhn4P2g2NSULGcyZ7aolG5WRU5GoLdY+j1+a0FZxbgLVtbH6dkW989q7WPqpYs/NCmyd4WgwrMJ1c3Vy3y2cs5/Lt1syd8fZXRy29sDsEA41rcqoN9/wt8UiHcS0hdT4d+wc833dqj7jFB9RFVuO61k+MNf+A0REumdLQ2hi5A6u5VooRn620nr6dunzg0jT8WG/hqNPvQhqRxvpAXDw2ubaUNwvwz8W3nGaCWYKirQ5D7AuVks3P3ArQqUb0On1UhUUQ7I8C6tLHA0c9w4K1TGnIOwgglAy63IZLCiaVfAxBRw+ZaUerS4a0tc5wdfJ1KSNOsvgEmN+x8zeJagHoM/EApHKzbVj6WaZWy7K6vWqbYAwAngf/F2q0KXwK6VfQQA05NpwHWDUcmMlrqxuM4RoEVRbK7vuEi6seVndYQyxg==",
+              "thinking": {
+                "id": "LuhtTZ1hp2tbe4RrV6IjMciP4i3Zu8/jbl3nLUA5d9Og5U/Zv/e/jiyDG4xbaEgSgehETSebvBk21spJ8auQMddb72oEc+7pnDo7yjkhXCkfbw6s61PfdfE/tTJUWcSXBeTCOblb6DJ6f1V/aPH3P1VFX+8OqObU3X1IMMvlgnnPv8Khoh6hnKtjb9tFLtL1Mo22xLtBsAfKpuPIKgMtLJyahBAm4Yb68cGVcCA7TYob0QekROvCi+8sYWH+m6xSNBhe/nY6pTrkBEKqrFyS9Jds5ahGcyK1Itbnwzd3ZuLZTtGkEUWgB/Tcgl8udAMhrF1givd3i+O5rMs7FG7ff39xcWbuBqm8yRpm9cvFP4CXT/E9tEfVoDDRTH/z4iBELxJxM8vsH09JCYc5W7h47arhnH4xYEiDJa843sSYxE04CGt6zJ3cweNt+T6FK3SAh8D3wf8EiQD346nDNPRlDvlT0SMz5fYP04cSP5E=",
+                "text": [],
+                "encrypted": "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",
+                "tokens": 70
+              },
+              "timestamp": 1789670136924,
+              "phase": "final_answer",
+              "modelId": "gpt-5.6-luna"
+            }
+          ],
+          "resolvedModel": "gpt-5.6-luna",
+          "modelMessageId": "60d958ca-f8a3-4484-a2d4-30ae3b557d60",
+          "responseId": "a214936e-3d46-4614-b05f-d85bbe48527e",
+          "sessionId": "0bc60da0-3e88-4b6e-9d2b-64c65784ddd5",
+          "agentId": "github.copilot.editsAgent"
+        },
+        "details": "GPT-5.6 Luna • 0.1 credits"
+      },
+      "responseMarkdownInfo": [
+        {
+          "suggestionId": "sgt-29834773-5bf4-45cd-9149-260248b1abe9"
+        },
+        {
+          "suggestionId": "sgt-d711388f-9ed6-4ae6-af8d-2d7833468570"
+        },
+        {
+          "suggestionId": "sgt-0beba351-c072-4a24-a68f-f9d747c91959"
+        },
+        {
+          "suggestionId": "sgt-3c4a2123-a731-42a1-9b45-8f93264f6be6"
+        }
+      ],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1789670136940
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "responseTimestamp": 1789670130979,
+      "timeSpentWaiting": 1789670130979,
+      "promptTokens": 34944,
+      "completionTokens": 270,
+      "outputBuffer": 128000,
+      "promptTokenDetails": [
+        {
+          "category": "System",
+          "label": "System Instructions",
+          "percentageOfPrompt": 21
+        },
+        {
+          "category": "System",
+          "label": "Tool Definitions",
+          "percentageOfPrompt": 42
+        },
+        {
+          "category": "User Context",
+          "label": "Messages",
+          "percentageOfPrompt": 4
+        },
+        {
+          "category": "User Context",
+          "label": "Files",
+          "percentageOfPrompt": 33
+        }
+      ],
+      "copilotCredits": 0.103824,
+      "elapsedMs": 5961
+    }
+  ]
+}
